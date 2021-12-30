@@ -24,6 +24,10 @@ app.use(bodyParser.urlencoded( { extended: true } ));
 app.use("/hostelApplicants", hostelApplications);
 app.use("/viewApplicants", hostelApplications);
 
+const PORT = process.env.PORT || 5000;
+// Executing the sever on given port number
+app.listen(PORT, console.log(
+    `Server started on port ${PORT}`));
 
 
 
